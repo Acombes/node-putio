@@ -1,6 +1,7 @@
 # Node put.io
 
-Provides scripts to poll & unzip ZIP archives of available files on your [put.io](https://put.io) account.
+Provides scripts to poll & unzip ZIP archives of available files on your [put.io](https://put.io) account.  
+It relies on the official pui.io package [`@putdotio/api-client`](https://www.npmjs.com/package/@putdotio/api-client) for the communication with the [pui.io API](https://api.put.io/v2/docs).
 
 ## Installation
 Install NPM dependencies:
