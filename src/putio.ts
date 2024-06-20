@@ -55,7 +55,7 @@ export default async function putio(
     const zipName = `${zip.fileName}.zip`;
     // FIXME sometimes the ZIP URL is `null`...
     console.log(`Downloading ${zipName} from ${zipUrls[zip.zipId]}`)
-    const file = createWriteStream(options?.zipDestination ? `./${options.zipDestination}/${zipName}` : zipName);
+    const file = createWriteStream(options?.zipDestination ? `${options.zipDestination}/${zipName}` : zipName);
     fetch(zipUrls[zip.zipId])
       .then(({ body }) => {
         Readable.fromWeb(body as ReadableStream<any>).pipe(file);
